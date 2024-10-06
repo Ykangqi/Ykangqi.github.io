@@ -1,0 +1,337 @@
+# 欢迎使用 Jekyll!
+#
+# 此配置文件用于影响整个站点的设置，这些值通常只需设置一次，之后很少需要编辑。
+# 由于技术原因，当你使用 `jekyll serve -l -H localhost` 时，此文件不会自动重新加载。
+# 如果你更改了此文件，请重新启动服务器进程。
+
+# Basic Site Settings 
+# 基本站点信息
+locale                   : "en-US"  # 设置站点的语言环境
+title                    : "Wen, Shengtao（文胜涛）"  # 站点标题
+title_separator          : "-"  # 标题分隔符
+name                     : &name "Shentao Wen"  # 站点所有者的名字
+description              : &description "Wen's Personal homepage"  # 站点描述
+url                      : https://watsontao.github.io  # 站点的基础 URL，包含协议部分，例如 "https://mmistakes.github.io"
+baseurl                  : ""  # 站点的子路径，例如 "/blog"
+repository               : "Watsontao/Watsontao.github.io"  # 站点的代码仓库地址
+
+# 站点作者 - 以下设置将控制出现在侧边栏的作者内容。
+# 如果字段为空，则不会显示相应的图标和链接，反之会显示。
+# 更多自定义可以通过编辑 /_includes/author-profile.html 实现。
+
+author:
+  # 个人信息
+  avatar           : "zhengjianzhao.png"  # 头像的文件名
+  name             : "Shengtao Wen"  # 作者名字
+  pronouns         : # 例如: "he/his"  # 性别代词
+  bio              : "Undergrad student, jitong, LUT"  # 左侧边栏的简短个人简介
+  location         : "Lanzhou, Gansu, China"  # 所在地
+  employer         : "Lanzhou University of Technology"  # 当前就职单位
+  uri              : # URL  # 个人主页链接
+  email            : "lutshengtao@163.com"  # 电子邮箱
+
+  # 学术网站
+  #arxiv            : # URL - 更新为你的个人链接
+  #googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"  # Google Scholar 链接
+  #impactstory      : # URL
+  #orcid            : "http://orcid.org/yourorcidurl"  # ORCID 链接
+  #semantic         : # URL
+  #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"  # PubMed 个人链接
+  #researchgate     : # URL
+
+  # 代码仓库和软件开发
+  #bitbucket        : # 用户名 - 更新为你在该站点的用户名
+  #codepen          : # 用户名
+  #dribbble         : # 用户名
+  #github           : "academicpages"  # GitHub 用户名
+  #kaggle           : # 用户名  
+  #stackoverflow    : # 用户编号或用户名编号 (例如, 使用 "1" 或 "1/jeff-atwood")    
+
+  # 社交媒体
+  #bluesky          : "bsky.app"  # 将此替换为你的 Bluesky 用户名
+  #facebook         : # 用户名
+  #flickr           : # 用户名
+  #foursquare       : # 用户名
+  #goodreads        : # 用户名
+  #google_plus      : # 用户名
+  #keybase          : # 用户名
+  #weibo            : # 用户名
+  #zhihu            : # 用户名
+
+# 出版物类别 - 以下为出版物类别列表及其标题
+# publication_category:
+  # books:
+    # title: 'Books'  # 书籍
+  # manuscripts:
+    # title: 'Journal Articles'  # 期刊文章   
+  # conferences:
+    # title: 'Conference Papers'  # 会议论文
+
+# Site Settings
+teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+breadcrumbs              : false # true, false (default)
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+talkmap_link             : false #change to true to add link to talkmap on talks page
+comments:
+  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  disqus:
+    shortname            :
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+staticman:
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "gh-pages" # "master", "gh-pages"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : true
+  path                   : "_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
+  transforms:
+    email                : "md5"
+  generatedFields:
+    date:
+      type               : "date"
+      options:
+        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+atom_feed:
+  hide                   : false     # change to true to hide the RSS feed in the footer
+  path                   : # blank (default) uses feed.xml
+
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+
+# Social Sharing
+twitter:
+  username               : &twitter
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :  # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+
+
+# Analytics
+analytics:
+  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  google:
+    tracking_id          :
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - local
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# These settings control the types of collections used by the template
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+  awards:                                # 添加新的 awards 集合
+    output: true
+    permalink: /awards/:title/        # 定义 awards 页面 URL 的格式
+
+
+# These settings control how pages and collections are included in the site
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _talks
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
+timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+
+# Mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

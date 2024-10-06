@@ -1,0 +1,74 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    <h2 class="archive__item-title" itemprop="headline">
+      {{ title }} <!-- 取消链接，不再用 <a> 标签 -->
+    </h2>
+
+    {% if post.date %}
+      <p class="page__date small-spacing"><strong>Awarded：</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+    {% endif %}
+
+    {% if post.award_recipient %}
+      <p class="small-spacing"><strong>Award Recipient：</strong> {{ post.award_recipient }}</p>
+    {% endif %}
+
+    {% if post.venue %}
+      <p><strong>Awarded at:</strong> {{ post.venue }}</p>
+    {% endif %}
+
+    {% if post.excerpt and site.read_more != 'enabled' %}
+      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% elsif post.excerpt and site.read_more == 'enabled' %}
+      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
+    {% endif %}
+
+    {% if post.description %}
+      <p>{{ post.description | markdownify }}</p>
+    {% endif %}
+
+  </article>
+</div>
+
+<style>
+  /* 自定义类，用于减少两行之间的间距 */
+  .small-spacing {
+    margin-bottom: 1px; /* 可以调整这个值来控制行距 */
+  }
+
+  /* 禁止标题文本的下划线 */
+  .archive__item-title {
+    text-decoration: none !important;
+  }
+  .archive__item-title {
+    white-space: nowrap; /* 防止自动换行 */
+    overflow: visible;   /* 确保所有内容可见 */
+    text-overflow: initial; /* 不显示省略号 */
+}
+
+</style>

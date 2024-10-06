@@ -1,0 +1,14 @@
+---
+layout: archive
+title: "Awards"
+permalink: /awards/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign sorted_awards = site.awards | sort: 'date' | reverse %}  <!-- 按日期排序并倒序显示 -->
+
+{% for post in sorted_awards %}
+  {% include archive-single-award.html %}
+{% endfor %}

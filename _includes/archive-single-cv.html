@@ -1,0 +1,57 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <li>
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      {{ title }} <!-- 取消了链接，不再用 <a> 标签 -->
+    </h3>
+    
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+    
+    {% if post.venue%}
+      <p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p>
+    {% endif %}
+    </li>
+  </article>
+</div>
+
+<style>
+  /* 禁止标题文本的下划线并取消加粗 */
+  .archive__item-title {
+    text-decoration: none;   /* 确保不会有下划线 */
+    cursor: default;         /* 鼠标悬停时不显示指针样式 */
+    font-weight: normal;     /* 取消加粗 */
+  }
+
+  /* 禁止鼠标悬停时任何文本的下划线 */
+  .archive__item-title:hover {
+    text-decoration: none !important; /* 确保在悬停时也没有下划线 */
+  }
+</style>
