@@ -7,7 +7,7 @@
 # Basic Site Settings 
 # 基本站点信息
 locale                   : "en-US"  # 设置站点的语言环境
-title                    : "Yu, Kangqi（于康祺）"  # 站点标题
+title                    : "Yu, Kangqi（于, 康祺）"  # 站点标题
 title_separator          : "-"  # 标题分隔符
 name                     : &name "kangqi Yu"  # 站点所有者的名字
 description              : &description "Yu's Personal homepage"  # 站点描述
