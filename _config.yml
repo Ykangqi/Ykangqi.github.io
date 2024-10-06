@@ -7,13 +7,13 @@
 # Basic Site Settings 
 # 基本站点信息
 locale                   : "en-US"  # 设置站点的语言环境
-title                    : "Wen, Shengtao（文胜涛）"  # 站点标题
+title                    : "Yu, Kangqi（于康祺）"  # 站点标题
 title_separator          : "-"  # 标题分隔符
-name                     : &name "Shentao Wen"  # 站点所有者的名字
-description              : &description "Wen's Personal homepage"  # 站点描述
-url                      : https://watsontao.github.io  # 站点的基础 URL，包含协议部分，例如 "https://mmistakes.github.io"
+name                     : &name "kangqi Yu"  # 站点所有者的名字
+description              : &description "Yu's Personal homepage"  # 站点描述
+url                      : https://Ykangqi.github.io  # 站点的基础 URL，包含协议部分，例如 "https://mmistakes.github.io"
 baseurl                  : ""  # 站点的子路径，例如 "/blog"
-repository               : "Watsontao/Watsontao.github.io"  # 站点的代码仓库地址
+repository               : "Ykangqi/Ykangqi.github.io"  # 站点的代码仓库地址
 
 # 站点作者 - 以下设置将控制出现在侧边栏的作者内容。
 # 如果字段为空，则不会显示相应的图标和链接，反之会显示。
@@ -21,14 +21,14 @@ repository               : "Watsontao/Watsontao.github.io"  # 站点的代码仓
 
 author:
   # 个人信息
-  avatar           : "zhengjianzhao.png"  # 头像的文件名
-  name             : "Shengtao Wen"  # 作者名字
+  avatar           : "yu.png"  # 头像的文件名
+  name             : "kangqi Yu"  # 作者名字
   pronouns         : # 例如: "he/his"  # 性别代词
   bio              : "Undergrad student, jitong, LUT"  # 左侧边栏的简短个人简介
   location         : "Lanzhou, Gansu, China"  # 所在地
   employer         : "Lanzhou University of Technology"  # 当前就职单位
   uri              : # URL  # 个人主页链接
-  email            : "lutshengtao@163.com"  # 电子邮箱
+  email            : "2589809095@qq.com"  # 电子邮箱
 
   # 学术网站
   #arxiv            : # URL - 更新为你的个人链接

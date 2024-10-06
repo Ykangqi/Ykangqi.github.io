@@ -9,7 +9,7 @@ redirect_from:       # 设置从其他链接重定向到该页面
 ---
 
 
-I'm a third year undergraduate student majoring in software engineering at the [School of Computer and Communication](https://jitong.lut.edu.cn/),  [Lanzhou University of Technology](https://www.lut.edu.cn/).
+I'm a third year undergraduate student majoring in Internet of Things Engineering at the [School of Computer and Communication](https://jitong.lut.edu.cn/),  [Lanzhou University of Technology](https://www.lut.edu.cn/).
 
 
 
